@@ -81,4 +81,72 @@ eg: In C,
      
      In C++,
      cout << "Area of circle is " << area;
-     */
+     
+     
+     
+1. Basic Units 
+1 byte = 8 bits
+A bit = 0 or 1
+
+2. How many values or numbers can n bits store?
+ formula:Total values=2^n numbers
+
+Example: 8 bits-->2^8 = 256 values
+
+3. Signed vs Unsigned (critical distinction)
+Unsigned (only positive + zero)
+
+Range:0 to (2^n−1)
+
+
+Signed (positive + negative)
+
+Range:−2^(n−1) to (2^(n−1)−1)
+
+👉 One bit is used for sign
+
+
+-->Exact ranges 
+
+>>char (1 byte = 8 bits)
+Signed:−128 to 127
+Unsigned:0 to 255
+
+
+>>short (2 bytes = 2*8 = 16 bits--->2^16 numbers)
+Range: −2^15 to (2^15−1)
+→ -32,768 to 32,767
+
+
+>>int (4 bytes = 32 bits-->2^32 numbers)
+Range:−2^31 to (2^31−1)
+→ approx -2,147,483,648 to 2,147,483,647
+
+
+>>long long (8 bytes = 8*8 = 64 bits-->2^64 numbers)
+Range:−2^63 to (2^63−1)
+Roughly: -9 × 10¹⁸ to +9 × 10¹⁸
+
+
+-->Keyword	Meaning
+    short->smaller integer
+    int->standard integer
+    long->bigger (platform dependent)
+    long long->guaranteed 64-bit
+
+    Example:
+    short a = 10;
+    int b = 1000;
+    long long c = 10000000000;
+ 
+    
+6. Important Reality (most people ignore this)
+Sizes are:compiler + system dependent
+But in practice (CP + most systems):
+                                        int → 4 bytes
+                                        long long → 8 bytes
+
+
+
+-->In some Cases,Overflow occurs due to large numbers so it is advisable to use long or long long instead of int in CP to avoid overflowing error
+*/
