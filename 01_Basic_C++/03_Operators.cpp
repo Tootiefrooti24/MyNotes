@@ -267,4 +267,94 @@ eg:-
 Output:-
             The greatest number is 4
 
+
+
+7.MISCELLANEOUS OPERATORS
+
+1. sizeof Operator
+Definition: sizeof is a unary operator used to determine the size of a variable or data type in bytes.
+
+Syntax:
+sizeof(type);
+sizeof(variable);
+Example:
+int x;
+cout << sizeof(x);   // usually 4
+cout << sizeof(char); // always 1
+
+
+2. Comma Operator (,)
+Definition: The comma operator evaluates multiple expressions from left to right and returns the value of the last expression.
+
+Example:
+int m = 5;
+int n = (m+1, m-2, m+5);  // result = m+5 = 10
+
+Important:
+int a, b, c;
+Here comma is only a separator, not the operator.
+
+3. Address-of Operator (&)
+Definition: Returns the memory address of a variable.
+
+Example:
+int x = 10;
+cout << &x;
+Note:Also used in reference declaration:
+int &ref = x;
+
+
+4. Dot Operator (.)
+Definition: Used to access members of a structure or class object.
+
+Example:
+struct A {
+    int x;
+};
+
+A obj;
+obj.x = 10;
+
+
+5. Arrow Operator ->
+Definition:Used to access members of a structure/class using a pointer.
+
+Example:
+A obj;
+A* ptr = &obj;
+
+ptr->x = 10;
+Equivalent:
+(*ptr).x
+
+
+6. Casting Operators
+Definition:Used to convert one data type into another.
+
+
+***************************************************HIERARCHY OF OPERATORS****************************************************************************
+
+1. ()   []   ->   .          (Postfix)
+
+2. ++   --   !   ~   &   *   sizeof   (Unary)
+
+3. *   /   %                (Multiplicative)
+
+4. +   -                    (Additive)
+
+5. <<   >>                  (Shift)
+
+6. <   >   <=   >=          (Relational)
+
+7. ==   !=                  (Equality)
+
+8. &   ^   |                (Bitwise)
+
+9. &&   ||                  (Logical)
+
+10. =   +=   -=             (Assignment)
+
+11. ,                       (Comma - lowest)
+
+
 */
