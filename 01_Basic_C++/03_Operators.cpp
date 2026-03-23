@@ -357,4 +357,14 @@ Definition:Used to convert one data type into another.
 11. ,                       (Comma - lowest)
 
 
+
+eg:- cout<<(4 + 2 + "pqr")      #output-->6pqr
+    cout<<( "pqr" + 4 + 2 )     #output-->pqr42
+
+
+-->jab bhi hum compute karte hai operators ko toh left se right compute hota hai.So here humne 4 and pqr se compute karna start kiya respectively in both examples
+-->4 and 2 will be added(left to right is followed) which results in 6.Now 6 will be added to pqr(which is a string) so it will be concatenated and become 6pqr.
+-->similarly, pqr will be added to 4 (left to right manner) which will be concatenated and become new string which will be pqr4 and similarly 2 will also be added(concatenated) and become pqr42.
+
+
 */
