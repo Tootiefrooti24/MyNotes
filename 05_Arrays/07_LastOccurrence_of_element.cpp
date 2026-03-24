@@ -1,15 +1,17 @@
-//Last occurrence of element in array
+// Last occurrence of element in array
 
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main()
+{
     int n;
     cout << "Enter n: ";
     cin >> n;
 
     vector<int> v(n);
-    for(int i = 0; i < n; i++){  
+    for (int i = 0; i < n; i++)
+    {
         cin >> v[i];
     }
 
@@ -19,8 +21,10 @@ int main() {
 
     int occurrence = -1;
 
-    for(int i = n - 1; i >= 0; i--){
-        if(v[i] == m){
+    for (int i = n - 1; i >= 0; i--)
+    {
+        if (v[i] == m)
+        {
             occurrence = i;
             break;
         }
