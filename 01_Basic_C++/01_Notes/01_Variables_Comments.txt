@@ -48,7 +48,7 @@ eg 2.:-    #include <iostream>
            int main() {
             int num = 3;
             num = 7;
-            cout << num;
+            cout << num1;
             return 0;
         }...#output-->7.......here the output would be 7 cuz at first we assigned 3 to the num variable but after that we updated it and assigned 7 so the new value which is 7 would be printed in the output
 
