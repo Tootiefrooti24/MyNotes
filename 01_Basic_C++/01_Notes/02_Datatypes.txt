@@ -52,7 +52,7 @@ Example:
 struct Student {
     int id;
     string name;
-}; 
+};
 
 
 --> C++ me string use kar sakte hai hum and for that we need to write #include<string> in the header
@@ -73,18 +73,18 @@ eg: #include <iostream>
             cin>>n;
             cout << n;
         }
-    
 
--->Hum C language me format specifiers like %d, %c etc use karte the but in c++ it is not required cuz cout is sufficient 
+
+-->Hum C language me format specifiers like %d, %c etc use karte the but in c++ it is not required cuz cout is sufficient
 eg: In C,
      printf("The area of circle is %f",area)
-     
+
      In C++,
      cout << "Area of circle is " << area;
-     
-     
-     
-1. Basic Units 
+
+
+
+1. Basic Units
 1 byte = 8 bits
 A bit = 0 or 1
 
@@ -106,7 +106,7 @@ Range:−2^(n−1) to (2^(n−1)−1)
 👉 One bit is used for sign
 
 
--->Exact ranges 
+-->Exact ranges
 
 >>char (1 byte = 8 bits)
 Signed:−128 to 127
@@ -138,8 +138,8 @@ Roughly: -9 × 10¹⁸ to +9 × 10¹⁸
     short a = 10;
     int b = 1000;
     long long c = 10000000000;
- 
-    
+
+
 6. Important Reality (most people ignore this)
 Sizes are:compiler + system dependent
 But in practice (CP + most systems):
