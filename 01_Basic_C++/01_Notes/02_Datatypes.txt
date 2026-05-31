@@ -36,7 +36,6 @@ int arr[5];     // array
 int *p = &arr[0]; // pointer
 
 
-
 c. User-Defined Data Types
 These are created by the programmer.
 Definition:Custom data types defined using C++ constructs.
