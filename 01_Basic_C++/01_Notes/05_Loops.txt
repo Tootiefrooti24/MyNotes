@@ -65,7 +65,6 @@ Output:
 1 2 3 4
 
 
-
 5. continue Statement
 Definition: Skips the current iteration and moves to next iteration
 
