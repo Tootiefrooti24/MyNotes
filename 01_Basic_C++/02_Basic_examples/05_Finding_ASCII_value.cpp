@@ -6,4 +6,5 @@ int main(){
     cin>>ch;
     cout<<(int)ch<<endl;
     return 0;
+    
 }
