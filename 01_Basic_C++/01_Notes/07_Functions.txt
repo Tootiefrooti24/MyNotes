@@ -1,0 +1,227 @@
+1.Functions in C++
+   
+   A function is a reusable block of code that performs a specific task.
+
+2. Why Do We Need Functions?
+
+Without functions:
+-> Code repetition increases
+-> Debugging becomes difficult
+-> Programs become harder to read
+
+Functions provide:
+-> Reusability
+-> Modularity
+-> Better readability
+-> Easier debugging
+
+
+3.Syntax
+
+return_type function_name(parameters)
+{
+    // code
+    return value;
+}
+
+
+4.Example
+
+int add(int a, int b)
+{
+    return a + b;
+}
+cout << add(5, 10);
+
+Output:15
+//Explanation
+                    a and b are parameters.
+                    5 and 10 are arguments.
+
+The function returns their sum.
+
+
+5. Types of Functions
+
+a. Standard Library Functions
+
+   Functions already provided by C++.Used by including the appropriate headers.
+
+Examples: sqrt(),pow(),max(),min(),sort()
+
+
+b. User Defined Functions
+
+   Functions created by the programmer.
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+c. Types Based on Arguments and Return Values
+
+ --> Type 1: No Arguments, No Return Value
+
+                void greet()
+                {
+                    cout << "Hello";
+                }
+
+
+--> Type 2: Arguments, No Return Value
+
+                void printSum(int a, int b)
+                {
+                    cout << a + b;
+                }
+                
+
+--> Type 3: No Arguments, Return Value
+
+                int getNumber()
+                {
+                    return 10;
+                }
+                
+
+--> Type 4: Arguments + Return Value
+
+                int add(int a, int b)
+                {
+                    return a + b;
+                }
+
+--> Most commonly used is Arguments + Return Value because it is reusable and easy to test.
+
+d. Parameters vs Arguments
+
+Function Definition: int add(int a, int b)
+
+`a` and `b` are called:Parameters or Formal Parameters
+
+Function Call: add(5, 10);
+`5` and `10` are called: Arguments or Actual Parameters
+
+
+e. Pass By Value
+-->A copy is created and original stays unchanged.
+
+            void fun(int x)
+            {
+                x = 100;
+            }
+            int a = 10;
+            fun(a);
+
+            Output:10
+
+-->Changing x does not affect a.
+-->Majorly used for small datatypes like int,char,bool,double,long long
+
+
+f. Pass By Reference
+-->No copy is created and original data is passed.x and a refer to the same memory location.It is used when Need to modify original data.
+
+            void fun(int& x)
+            {
+                x = 100;
+            }
+            int a = 10;
+            fun(a);
+
+            Output:100
+
+Pass By Value = Photocopy
+Pass By Reference = Original Document
+
+-->Used for large objects like vector,string,map,set,unordered_map
+
+
+g. Const Reference
+-->No Copy and Cannot Modify.It is used when we do not want unneccessary copy and also do not want to modify original data.
+
+        void print(const vector<int>& v) { ....
+        ......}
+
+
+h. Default Parameters
+
+void greet(string name = "Guest")
+{
+    cout << name;
+}
+
+
+I. Inline Functions
+-->Used to reduce function call overhead.
+
+            inline int square(int x)
+            {
+                return x * x;
+            }
+
+Compiler may replace: square(5) with 5 * 5
+
+
+J. Lambda Functions
+
+Anonymous functions.No function name required.
+
+        auto add = [](int a, int b)
+        {
+            return a + b;
+        };
+        cout << add(5, 10);
+
+        Output:15
+-->It is mostly used for custom sorting
+
+        sort(v.begin(), v.end(),
+        [](int a, int b)
+        {
+            return a > b;
+        });
+-->Sorts in descending order.
+
+K. Template Functions
+-->Template Functions allow writing one generic function that works with multiple datatypes.
+
+int maximum(int,int);
+double maximum(double,double);
+long long maximum(long long,long long);
+
+---Solution
+            template<typename T>
+
+            T maximum(T a, T b)
+            {
+                return (a > b) ? a : b;
+            }
+-->T is the Placeholder Datatype and Compiler replaces it later.Important because STL is built using templates like vector<int> etc.
+
+
+L. Competitive Programming Relevance
+
+Functions help:
+-> Organize solutions
+-> Separate logic
+-> Reduce mistakes
+
+When same logic is repeated-->Create a function.
+
+M.Common Mistakes
+
+-->Forgetting return statement.
+-->Wrong return type.
+-->Passing large vectors by value.
+
+NOTE:-
+
+Pass large containers using const reference.
+
+Example:
+
+void solve(const vector<int>& v)
+
+
